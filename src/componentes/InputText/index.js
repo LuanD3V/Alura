@@ -5,7 +5,7 @@ const InputText = (props) => {
     return (
         <div className="box-input">
             <label>{props.label}</label>
-            <input placeholder={props.placeholder}/>
+            <input required={props.obrigatorio} placeholder={props.placeholder}/>
         </div>
     )
 
