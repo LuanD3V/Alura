@@ -5,7 +5,7 @@ import ListaSuspensa from '../ListaSuspensa'
 import Button from '../Button'
 import React from 'react'
 
-const Formulario = () => {
+const Formulario = (props) => {
 
     const organizacao = [
         'Programação',
@@ -19,7 +19,12 @@ const Formulario = () => {
 
     const aoSalvar = (evento) => {
         evento.preventDefault()
-        console.log("O formulário foi salvo =>", nome, cargo, endereco, time)
+        props.aoCadastrarColaborador({
+            nome,
+            cargo,
+            endereco,
+            time
+        })
     }
 
     const [nome, setNome] = useState('')

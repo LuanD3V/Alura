@@ -1,14 +1,9 @@
 import './App.css';
-import Banner from './componentes/Banner';
-import Formulario from './componentes/Formulario';
+import Home from './home/index'
 
 function App() {
   return (
-    <div className="App">
-      <Banner />
-      <Formulario />
-
-    </div>
+    <Home />
   );
 }
 
