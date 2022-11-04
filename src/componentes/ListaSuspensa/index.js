@@ -5,7 +5,11 @@ const ListaSuspensa = (props) => {
     return (
         <div className='box-list'>
             <label>{props.label}</label>
-            <select required={props.obrigatorio}>
+            <select 
+            required={props.obrigatorio}
+            valor={props.valor}
+            onChange={evento => props.aoAlterar(evento.target.value)}
+            >
                 {props.itens.map(item => <option key={item}>{item}</option>)}
             </select>
         </div>
