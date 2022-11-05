@@ -1,5 +1,7 @@
 import { useState } from 'react'
+
 import './Formulario.css'
+
 import InputText from '../InputText'
 import ListaSuspensa from '../ListaSuspensa'
 import Button from '../Button'
@@ -7,29 +9,19 @@ import React from 'react'
 
 const Formulario = (props) => {
 
-    const organizacao = [
-        'Programação',
-        'Frontend',
-        'Data Science',
-        'Ux e Design',
-        'Devops',
-        'Mobile',
-        'Inovação e Gestão'
-    ]
-
     const aoSalvar = (evento) => {
         evento.preventDefault()
         props.aoCadastrarColaborador({
             nome,
             cargo,
-            endereco,
+            imagem,
             time
         })
     }
 
     const [nome, setNome] = useState('')
     const [cargo, setCargo] = useState('')
-    const [endereco, setEndereco] = useState('')
+    const [imagem, setImagem] = useState('')
     const [time, setTime] = useState('')
 
     return (
@@ -52,15 +44,15 @@ const Formulario = (props) => {
                     />
                 <InputText 
                     obrigatorio={true} 
-                    label="Endereço" 
-                    placeholder="Digite seu endereço"
-                    valor={endereco}
-                    aoAlterar={valor => setEndereco(valor)}
+                    label="Imagem" 
+                    placeholder="Anexe a sua imagem"
+                    valor={imagem}
+                    aoAlterar={valor => setImagem(valor)}
                     />
                 <ListaSuspensa 
                     obrigatorio={true} 
                     label="Time" 
-                    itens={organizacao} 
+                    itens={props.times}
                     valor={time}
                     aoAlterar={valor => setTime(valor)}
                     />
