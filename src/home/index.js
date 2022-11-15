@@ -49,7 +49,6 @@ const Home = () => {
     const [colaboradores, setColaboradores] = useState([])
 
     const novoColaboradorCadastrado = (colaborador) => {
-        console.log(colaborador)
         setColaboradores([...colaboradores, colaborador])
     }
 
