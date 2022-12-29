@@ -5,7 +5,6 @@ import './Formulario.css'
 import InputText from '../InputText'
 import ListaSuspensa from '../ListaSuspensa'
 import Button from '../Button'
-import React from 'react'
 
 const Formulario = (props) => {
 
@@ -20,7 +19,7 @@ const Formulario = (props) => {
         setNome('')
         setCargo('')
         setImagem('')
-        setTime('')
+        // setTime('')
     }
 
     const [nome, setNome] = useState('')
