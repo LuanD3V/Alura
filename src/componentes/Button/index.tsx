@@ -5,8 +5,8 @@ interface ButtonProps {
   children: ReactElement;
 }
 
-const Button = (props: ButtonProps) => {
-  return <button className="button">{props.children}</button>;
+const Button = ({ children }: ButtonProps) => {
+  return <button className="button">{children}</button>;
 };
 
 export default Button;
